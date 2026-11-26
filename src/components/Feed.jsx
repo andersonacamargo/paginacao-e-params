@@ -1,13 +1,15 @@
-function Feed({ id }) {
+function Feed({ feed }) {
     return (
-        <section>
-            <h2>Feed #{id}</h2>
+        <article>
+            <h2>{feed.titulo}</h2>
 
-            <p>
-                Exibindo informações do feed
-                identificado pelo ID {id}.
-            </p>
-        </section>
+            <p>{feed.conteudo}</p>
+
+            <small>
+                Publicado em:{" "}
+                {new Date(feed.data).toLocaleString("pt-BR")}
+            </small>
+        </article>
     );
 }
 
